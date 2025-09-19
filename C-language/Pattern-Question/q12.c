@@ -2,15 +2,20 @@
 int main(){
     int n;
     scanf("%d",&n);
+    int count=0;
 for(int i=1; i<=n; i++){ // 1
-    for(int j=1;  j<=n-i;  j++){  // 1 2 
-  printf(" ", n-i);  //  5 4 3 2 1 
+    for(int j=1;  j<=n;  j++){  // 1 2 
+     if(i+j >5){
+    printf("%c",'A' +count);
+    count++;
+  }
+    else{
+        printf(" ");
+    }
+    }  
+    printf("\n");
+   count=0;
     
     }  
-    for(int j=0; j<i; j++ ){  // 0
-        printf("%c", 'A'+j);
-    }
-    printf("\n");
-}
 return 0;
 }
