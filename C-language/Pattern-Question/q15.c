@@ -1,20 +1,22 @@
-
-
 #include <stdio.h>
 
 int main()
 {
   int n;
-  scanf("%d",&n); // 4 
-  for(int i=1; i<=n; i++){ // 1 
-      for(int j=1; j<=n-i; j++){ // 1 2 3  
-          printf(" "); // 
-      } 
-      
-      for(int k=0;k<2*i-1;  k=k+1){ // 1 
-          printf("%c", 'A'+k);
-      }printf("\n");
-  }
+  scanf("%d",&n);
+  int count=0; // 4 
+for(int i=0;i<=n; i++){
+    for(int j=0; j<=2*n -1;  j++){
+        if(i+j>n && i+j <2*i +n){
+            printf("%c ",  'A' + count);
+            count++;
+        }
+        else{
+            printf("  ");
+        }
+    } printf("\n");
+    count=0;
+}
 
     return 0;
 }
